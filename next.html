@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+  margin-top: 50px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  position: relative;
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  padding: 10px;
+}
+
+.country-selection {
+  position: relative;
+}
+
+.country-selection input[type="text"] {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.country-selection:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 100%;
+  background-color: #ccc;
+}
+
+.country-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 25px 25px;
+}
+
+.country-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.country-list ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.country-list ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.country-list ul li a:hover {
+  background-color: #f5f5f5;
+}
+
+.search-bar button[type="submit"] {
+  background-color: red;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-bar button[type="submit"] i {
+  color: white;
+}
+
+.country-selection,
+.country-selection input[type="text"],
+.country-list {
+  border-radius: 25px;
+}
+
+.country-list {
+  overflow: auto;
+  max-height: 200px;
+}
+    </style>
+</head>
+<body>
+    <form>
+        <div class="search-bar">
+          <input type="text" placeholder="tacos, cheap dinner, Max’s">
+          <div class="country-selection">
+            <input type="text" placeholder="India" onclick="openCountryList()">
+            <div class="country-list" id="country-list">
+              <ul>
+                <li><a href="#">Afghanistan</a></li>
+                <li><a href="#">Albania</a></li>
+                <li><a href="#">Algeria</a></li>
+                <!-- more countries... -->
+              </ul>
+            </div>
+          </div>
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+      </form>
+      
+</body>
+</html>

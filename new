@@ -1,0 +1,86 @@
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="#"><img src="your-logo.png" alt="Your Company Name"></a>
+    </div>
+    <div class="search">
+      <form action="#">
+        <div class="search-inputs">
+          <input type="text" placeholder="What are you looking for?">
+          <div class="location-dropdown">
+            <button class="location-button">All Locations</button>
+            <div class="location-menu">
+              <div class="location-menu-container">
+                <h3>Search Locations</h3>
+                <div class="location-menu-list">
+                  <a href="#">Alabama</a>
+                  <a href="#">Alaska</a>
+                  <a href="#">Arizona</a>
+                  <a href="#">Arkansas</a>
+                  <a href="#">California</a>
+                  <a href="#">Colorado</a>
+                  <a href="#">Connecticut</a>
+                  <a href="#">Delaware</a>
+                  <a href="#">Florida</a>
+                  <a href="#">Georgia</a>
+                  <a href="#">Hawaii</a>
+                  <a href="#">Idaho</a>
+                  <a href="#">Illinois</a>
+                  <a href="#">Indiana</a>
+                  <a href="#">Iowa</a>
+                  <a href="#">Kansas</a>
+                  <a href="#">Kentucky</a>
+                  <a href="#">Louisiana</a>
+                  <a href="#">Maine</a>
+                  <a href="#">Maryland</a>
+                  <a href="#">Massachusetts</a>
+                  <a href="#">Michigan</a>
+                  <a href="#">Minnesota</a>
+                  <a href="#">Mississippi</a>
+                  <a href="#">Missouri</a>
+                  <a href="#">Montana</a>
+                  <a href="#">Nebraska</a>
+                  <a href="#">Nevada</a>
+                  <a href="#">New Hampshire</a>
+                  <a href="#">New Jersey</a>
+                  <a href="#">New Mexico</a>
+                  <a href="#">New York</a>
+                  <a href="#">North Carolina</a>
+                  <a href="#">North Dakota</a>
+                  <a href="#">Ohio</a>
+                  <a href="#">Oklahoma</a>
+                  <a href="#">Oregon</a>
+                  <a href="#">Pennsylvania</a>
+                  <a href="#">Rhode Island</a>
+                  <a href="#">South Carolina</a>
+                  <a href="#">South Dakota</a>
+                  <a href="#">Tennessee</a>
+                  <a href="#">Texas</a>
+                  <a href="#">Utah</a>
+                  <a href="#">Vermont</a>
+                  <a href="#">Virginia</a>
+                  <a href="#">Washington</a>
+                  <a href="#">West Virginia</a>
+                  <a href="#">Wisconsin</a>
+                  <a href="#">Wyoming</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="buttons">
+      <a href="#" class="button">Yelp for Business</a>
+      <a href="#" class="button">Write a Review</a>
+      <a href="#" class="button-outline">Login</a>
+      <a href="#" class="button-red">Sign Up</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    background-color:  aqua;
+  }

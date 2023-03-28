@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+          /* .search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search-inputs {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.search-inputs input[type="text"] {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.country-dropdown {
+  position: relative;
+  margin-left: 5px;
+}
+
+.country-dropdown input[type="text"] {
+  border: none;
+  outline: none;
+  padding-right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 100%;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+
+.country-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search-button {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.search-button i {
+  font-size: 16px;
+  color: #ccc;
+} */
+/* /////////////////////////////////////////another search bar//////////////////////////////////////// */
+/* .search-container {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.search-inputs {
+  display: flex;
+  flex: 1;
+}
+
+input[type="text"] {
+  border: none;
+  flex: 1;
+}
+
+.country-dropdown {
+  position: relative;
+}
+
+.country-dropdown-label {
+  display: block;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.country-dropdown-label:before {
+  content: "\25BC";
+  display: inline-block;
+  transform: translateY(-50%) rotate(90deg);
+  margin-right: 5px;
+}
+
+.country-dropdown-label:hover {
+  background-color: #f4f4f4;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1;
+  display: none;
+}
+
+.country-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-list label {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.country-list label:hover {
+  background-color: #f4f4f4;
+}
+
+#country-dropdown-checkbox:checked ~ .dropdown-content {
+  display: block;
+}
+
+#india:checked ~ .country-list label[for="india"] {
+  display: none;
+}
+
+
+
+.search-button {
+  background-color: red;
+} */
+/* //////////////////////////////////////////// */
+
+/* .search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search-bar .search-inputs {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+button[type="submit"] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.fa-search {
+  font-size: 20px;
+} */
+
+
+
+    </style>
+    <script>
+        function selectCountry(country) {
+  document.getElementById('country-input').value = country;
+  // hide the dropdown
+  document.querySelector('.dropdown-content').style.display = 'none';
+}
+    </script>
+</head>
+<body>
+    <!-- <div class="search-container">
+        <div class="search-inputs">
+          <input type="text" placeholder="tacos, cheap dinner, Max's">
+          <div class="country-dropdown">
+            <input type="text" placeholder="India">
+            <div class="dropdown-content">
+              <a href="#">Afghanistan</a>
+              <a href="#">Albania</a>
+              <a href="#">Algeria</a>
+              <a href="#">Andorra</a> -->
+              <!-- add more country links here -->
+            <!-- </div>
+          </div>
+        </div>
+        <button class="search-button"><i class="fa fa-search"></i></button>
+      </div> -->
+      <!-- ////////////////////////////////////////////////////////////another search bar -->
+      <!-- <div class="search-container">
+        <div class="search-inputs">
+          <input type="text" placeholder="tacos, cheap dinner, Max's">
+          <div class="country-dropdown">
+            <input type="checkbox" id="country-dropdown-checkbox">
+            <label for="country-dropdown-checkbox" class="country-dropdown-label">India</label>
+            <div class="dropdown-content">
+              <label for="india" onclick="document.getElementById('country-dropdown-checkbox').checked = false;">India</label>
+              <input type="checkbox" id="india">
+              <div class="country-list">
+                <label for="afghanistan" onclick="document.getElementById('country-dropdown-checkbox').checked = false;">Afghanistan</label>
+                <label for="albania" onclick="document.getElementById('country-dropdown-checkbox').checked = false;">Albania</label>
+                <label for="algeria" onclick="document.getElementById('country-dropdown-checkbox').checked = false;">Algeria</label> -->
+                <!-- add more country labels here -->
+              <!-- </div>
+            </div>
+          </div>
+        </div>
+        <button class="search-button"><i class="fa fa-search"></i></button>
+      </div> -->
+      <!-- ////////////////////////////////////////////////////////// -->
+      <!-- <div class="search-container">
+        <div class="search-inputs">
+          <input type="text" placeholder="tacos, cheap dinner, Max's">
+          <div class="country-dropdown">
+            <input type="text" id="country-input" placeholder="India">
+            <div class="dropdown-content">
+              <a href="#" onclick="selectCountry('Afghanistan')">Afghanistan</a>
+              <a href="#" onclick="selectCountry('Albania')">Albania</a>
+              <a href="#" onclick="selectCountry('Algeria')">Algeria</a>
+              <a href="#" onclick="selectCountry('Andorra')">Andorra</a> -->
+              <!-- add more country links here -->
+            <!-- </div>
+          </div>
+        </div>
+        <button class="search-button"><i class="fa fa-search"></i></button>
+      </div> -->
+      <!-- //////////////////////////////////////////////// -->
+
+      <!-- <div class="search-bar">
+        <div class="search-inputs">
+          <input type="text" placeholder="tacos, cheap dinner, Max’s">
+          <div class="dropdown">
+            <input type="text" class="country-selector" value="India">
+            <div class="dropdown-content">
+              <a href="#">Afghanistan</a>
+              <a href="#">Albania</a>
+              <a href="#">Algeria</a>
+              <a href="#">Andorra</a>
+              <a href="#">Angola</a> -->
+              <!-- more country options... -->
+            <!-- </div>
+          </div>
+        </div>
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div> -->
+      <!-- /////////////////////////////////////////////////////////// -->
+
+      <form>
+        <div style="display: flex; border-radius: 5px; overflow: hidden; background-color: #f1f1f1; ">
+          <input type="text" placeholder="tacos, cheap dinner, Max’s" style="border: none; padding: 10px;">
+          <div style="position: relative;">
+            <input type="text" placeholder="India" style="border: none; padding: 10px; cursor: pointer;">
+            <div id="country-list" style="display: none; position: absolute; top: 100%; left: 0; z-index: 1; background-color: white; border:none; border-top: none;">
+              <ul style="list-style: none; margin: 0; padding: 0; border: none;">
+                <li><a href="#">Afghanistan</a></li>
+                <li><a href="#">Albania</a></li>
+                <li><a href="#">Algeria</a></li>
+                <!-- more countries... -->
+              </ul>
+            </div>
+          </div>
+          <button type="submit" style="background-color: red; border: none; padding: 10px;"><i class="fas fa-search"></i></button>
+        </div>
+      </form>
+      <style>
+          button i {
+    color: white;
+  }
+  form
+  {
+    border: 1px;
+  }
+      </style>
+
+</body>
+</html>
