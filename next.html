@@ -121,6 +121,81 @@
           <button type="submit"><i class="fas fa-search"></i></button>
         </div>
       </form>
+
+      <!-- /////////////////////////////////////////////////////////////////////////////// -->
+      
+         <div class="search-bar">
+  <div class="search-bar-input">
+    <input type="text" placeholder="tacos, cheap dinner, Max’s">
+  </div>
+  <div class="vertical-line"></div>
+  <div class="location">
+    <div class="current-location-button">
+      Current Location
+    </div>
+    <div class="selected-country">India</div>
+    <div class="country-dropdown">
+      <ul>
+        <li><span class="current-location-text">Current Location</span></li>
+        <li>India</li>
+        <li>United States</li>
+        <li>Canada</li>
+        <li>United Kingdom</li>
+        <li>Australia</li>
+      </ul>
+    </div>
+  </div>
+  <div class="search-bar-button">
+    <i class="fa fa-search"></i>
+  </div>
+</div>
+<script>
+    const currentLocationButton = document.querySelector('.current-location-button');
+const selectedCountry = document.querySelector('.selected-country');
+const countryDropdown = document.querySelector('.country-dropdown');
+
+// Initialize the "Current Location" button text without the icon
+currentLocationButton.textContent = 'Current Location';
+
+// Get the user's current location
+function getCurrentLocation() {
+  navigator.geolocation.getCurrentPosition(position => {
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+
+    // Call a geocoding API to get the country from the latitude and longitude
+    const geocodingApiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=YOUR_API_KEY`;
+    fetch(geocodingApiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const country = data.results[0].components.country;
+        selectedCountry.textContent = country;
+        countryDropdown.classList.remove('active');
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  });
+}
+
+// Update the selected country when a country is clicked
+countryDropdown.addEventListener('click', event => {
+  const target = event.target;
+  if (target.tagName === 'LI') {
+    selectedCountry.textContent = target.textContent;
+    countryDropdown.classList.remove('active');
+  }
+});
+
+// Update the selected country when the "Current Location" button is clicked
+currentLocationButton.addEventListener('click', () => {
+  getCurrentLocation();
+});
+
+
+
+   
+</script>
       
 </body>
 </html>

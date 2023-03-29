@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Website Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants,Dentists,Bars,Beauty Salons,Doctors - Yelp</title>
+    <link rel="icon" href="img/logo.png" type="image/icon type">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/yourkitid.js"></script> 
+</head>
+  <style>
+  body {
+    margin: 0;
+}
+.banner {
+    height: 40.5em;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 40s infinite;
+    animation: slide 10s infinite;
+    box-shadow: inset 0px 0px 1000px rgb(2, 2, 2);
+}
+.banner1 {
+    background-image: url('banner1.jpg');
+}
+
+@keyframes slide {
+    0% {
+        background-image: url('img/first.webp');
+    }
+    33.3% {
+        background-image: url('img/second.jpg');
+    }
+    66.6% {
+        background-image: url('img/third.jpg');
+    }
+    100% {
+        background-image: url('img/first.webp');
+    }
+}
+
+
+  /* Navigation bar styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 15px;
+    background-color: #ffffff00;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* Logo styles */
+  .logo {
+    width: 5.5%;
+    height:4.5em;
+    margin-left: 30px;
+  }
+  
+  /* Search bar styles */
+  .search-bar {
+    flex-grow: 1;
+    margin-right: 4%;
+    margin-left: 2%;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    padding: 20px;
+  }
+
+  .search-bar input[type="text"] {
+    flex: 1;
+    border: none;
+    margin-right: 5px;
+    font-size: 16px;
+  }
+
+  .search-bar .location {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .search-bar .location.active {
+    max-height: 100px;
+  }
+  
+  .search-bar .location-label {
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .search-bar .location-value {
+    flex: 1;
+    font-size: 14px;
+    color: #666666;
+  }
+  
+  .search-bar .location-select {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    overflow: auto;
+    max-height: 150px;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .search-bar .location-select.active {
+    max-height: 150px;
+  }
+  
+  .search-bar .location-option {
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .search-bar .location-option:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Button styles */
+  .button {
+    padding: 21px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-left: 1%;
+  }
+  
+  .button:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .button-1
+  {
+    background-color: transparent;
+    font-size: 16px;
+    color: white;
+  }
+  .button-1:hover {
+    background-color: #ffffff;
+  }
+  
+  .button-2:hover {
+    background-color: #ffffff;
+    color: white;
+  }
+  
+  .button-2
+  {
+    color: white;
+    background-color: transparent;
+  }
+  .button-3 {
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .button-3:hover {
+    background-color: #ffffff;
+  }
+  
+  .button-4 {
+    background-color: #ff0000;
+    color: #ffffff;
+  }
+
+
+  
+  /* Add more button styles as needed */
+
+
+
+
+
+
+  /* //////////////////////////medeiaquery for mobile screen size//////////////////////////////////////// */
+    
+ /* Media query for small screens */
+ @media only screen and (max-width: 360px) {
+    .navbar {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      padding: 20px 40px;
+    }
+    
+    .logo {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      width:40%;
+      height: 30%;
+    }
+    
+    .search-bar {
+      width: 100%;
+      margin: 10px 0;
+    }
+    
+    .button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+</style>
+</head>
+<body>
+<div class="banner banner1">
+    <div class="navbar">
+        <img class="logo" src="img/yelp-512.png" alt="Logo">
+        <div class="search-bar">
+            <input  type="text" placeholder="Search...">
+            <div class="location">
+                <span class="location-label">Location:</span>
+                <span class="location-value">India</span>
+                <!-- <i class="fas fa-caret-down"></i> -->
+                <div class="location-select">
+                <div class="location-option">India</div>
+                <div class="location-option">USA</div>
+                <div class="location-option">Canada</div>
+                <div class="location-option">UK</div>
+                <!-- Add more options as needed -->
+                </div>
+            </div>    
+        </div>
+        <button class="button button-1">Yelp for Business</button>
+        <button class="button button-2">Write a Review</button>
+        <button class="button button-3">Button 3</button>
+        <button class="button button-4">Button 4</button>
+      </div>
+      
+</div>
+
+</body>
+</html>
