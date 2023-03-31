@@ -27,13 +27,6 @@
     animation: slide 10s infinite;
     box-shadow: inset 0px 0px 1000px rgb(2, 2, 2);
 }
-.banner1 {
-			background-image: url('img/first.webp');
-		    background-image: url('img/second.jpg');
-			animation-delay: 5s;
-			background-image: url('img/third.jpg');  
-			animation-delay: 5s;
-        }
 
 @keyframes slide {
     0% {
@@ -223,8 +216,59 @@
     font-weight: bolder;
   }
 
+  /* section flex */
 
-  
+  .card-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 33.33%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.profile {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+}
+
+.rating {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
   /* Add more button styles as needed */
 
 
@@ -501,18 +545,7 @@
 </head>
 <body>
 <div class="banner">
-    <div class="banner banner1">
-		<h1>Banner 1 Title</h1>
-		<h5>Banner 1 Subtitle</h5>
-	</div>
-	<div class="banner banner2">
-		<h1>Banner 2 Title</h1>
-		<h5>Banner 2 Subtitle</h5>
-	</div>
-	<div class="banner banner3">
-		<h1>Banner 3 Title</h1>
-		<h5>Banner 3 Subtitle</h5>
-	</div>
+    
     <div class="navbar">
         <img class="logo" src="img/yelp-512.png" alt="Logo">
         <div class="search-bar">
@@ -543,7 +576,25 @@
       
 </div>
 
-
+<section class="card-row">
+    <div class="card">
+      <div class="profile">
+        <img src="profile-pic-1.jpg" alt="Profile Picture">
+        <h2>Profile Name</h2>
+      </div>
+      <img src="item-image-1.jpg" alt="Item Image">
+      <div class="rating">4.5</div>
+    </div>
+    <div class="card">
+      <div class="profile">
+        <img src="profile-pic-2.jpg" alt="Profile Picture">
+        <h2>Profile Name</h2>
+      </div>
+      <img src="item-image-2.jpg" alt="Item Image">
+      <div class="rating">3.8</div>
+    </div>
+    <!-- Add 22 more card divs here -->
+  </section>
 
 
 </body>
